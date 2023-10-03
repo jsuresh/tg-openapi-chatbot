@@ -1,0 +1,2 @@
+ - Replace hardcoded bot (via ENV file) with DB lookup to make it multi-tenanted
+ - Allow prompts to be changed without a code change

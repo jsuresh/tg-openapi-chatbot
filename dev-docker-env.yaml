@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  postgres_db:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: chatstate
+      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_DB: chatstate
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+

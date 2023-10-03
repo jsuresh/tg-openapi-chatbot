@@ -1,0 +1,21 @@
+# Dev Setup
+
+python[3] -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt 
+cp env.example .env
+docker compose -f dev-docker-env.yaml up -d # start postgres
+
+# Creating a new Telegram Bot
+
+Go here: https://telegram.me/BotFather
+Follow prompts to create a new bot
+
+# Features
+
+/role # prints out the role
+/reset new role # deletes all chat history and restarts bot with a new role
+
+Random message => fires back a response
+
+Have fun :)
